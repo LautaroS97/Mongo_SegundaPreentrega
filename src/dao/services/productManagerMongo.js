@@ -65,10 +65,6 @@ export class ProductManagerMongo {
   async getProducts({ limit = 10, page, sort, query }) {
     const filter = {};
 
-    if (typeof limit === 'undefined') {
-      throw new Error('Error: Property "limit" is undefined');
-    }
-
     if (query) {
       filter.category = query;
     }

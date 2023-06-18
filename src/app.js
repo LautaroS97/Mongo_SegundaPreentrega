@@ -33,7 +33,7 @@ app.use("/", viewsRouter);
 socketServer.on("connection", async (socket) => {
   console.log("Nuevo cliente conectado");
   const products = await productManagerMongo.getProducts();
-  socket.emit("products", { limit: 10, page: 1, sort: "asc", query: null });
+  socket.emit("products", products);
   const msgs = await MsgModel.find({});
   socketServer.sockets.emit("all_msgs", msgs);
 
