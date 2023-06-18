@@ -14,7 +14,7 @@
 
         <button>Añadir al carrito</button>
 
-        <a href="http://localhost:8080/productDetail/{{this._id}}">Más detalles</a>
+        <a href="http://localhost:3000/productDetail/{{this._id}}">Más detalles</a>
 
       </div>
     {{/each}}
@@ -29,11 +29,11 @@
 
     {{prevPage}}
     {{#if hasPrevPage}}
-      <a href="http://localhost:8080/products/?page={{prevPage}}">⬅️</a>
+      <a href="http://localhost:3000/products/?page={{prevPage}}">⬅️</a>
     {{/if}}
     {{page}}
     {{#if hasNextPage}}
-      <a href="http://localhost:8080/products/?page={{nextPage}}">➡️</a>
+      <a href="http://localhost:3000/products/?page={{nextPage}}">➡️</a>
     {{/if}}
     {{nextPage}}
   </div>
